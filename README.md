@@ -74,7 +74,13 @@ Github Actions will be used for continous integration. The following stages will
 GitOps - AgroCD will be used for continous deployment.
 - Watch the helm chart
 - If there is an update to values.yaml file, it pulls the helm chart and installs it on the kubernetes cluster
-- 
+- Install Agro CD in your cluster using manifests 
+    `kubectl create namespace argocd`
+    `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
+- Expose the UI so you can have access
+    `kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
+- Retreive Loadbalancer service IP
+    `kubectl get svc argocd-server -n argocd`
 CI integrates updates on your app into your builds, tests it and updates the images, helm chart and/or manifest files. But it does not end there, you need CD to deploy your changes to your cluster, or a production environment.
 
 
