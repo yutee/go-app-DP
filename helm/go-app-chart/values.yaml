@@ -8,7 +8,7 @@ image:
   repository: utibeokon/go-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10263552670"
+  tag: "10265515548"
 
 ingress:
   enabled: false
