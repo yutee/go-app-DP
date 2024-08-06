@@ -1,5 +1,5 @@
 # Overview
-_A simple golang web app is provided, I will be deoloying the app using best devops practices which will include:_
+A simple golang web app is provided, I will be deoloying the app using best devops practices which will include:
     - Containerization (Multi Stage Docker Build) 
     - Creating Kubernetes Manifests 
     - Continuous Integration using GitHub Actions 
@@ -11,7 +11,7 @@ _A simple golang web app is provided, I will be deoloying the app using best dev
 
 ---
 
-## Running The Go App
+## Running The Go App Locally
 
 To run the server, execute the following command:
 
